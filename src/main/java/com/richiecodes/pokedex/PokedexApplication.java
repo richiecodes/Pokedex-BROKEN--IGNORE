@@ -1,4 +1,4 @@
-package com.richiedeluca.pokedex;
+package com.richiecodes.pokedex;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
