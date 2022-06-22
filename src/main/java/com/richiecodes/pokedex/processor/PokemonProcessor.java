@@ -9,7 +9,7 @@ public class PokemonProcessor implements ItemProcessor<Pokemon, PokemonDTO> {
 
     @Override
     public PokemonDTO process(final Pokemon pokemon) throws Exception {
-        System.out.println("Transforming Pokemon to PokemonDTO...");
+        System.out.println("Adding " + pokemon.getName().toUpperCase() + " (ID no: " + pokemon.getNum() + ") to SQL table...");
 
         return new PokemonDTO(pokemon.getNum(), pokemon.getName(), pokemon.getType1(), pokemon.getType2(),
                 pokemon.getTotal(), pokemon.getHp(), pokemon.getAtt(), pokemon.getDef(), pokemon.getSpatk(), pokemon.getSpdef(),

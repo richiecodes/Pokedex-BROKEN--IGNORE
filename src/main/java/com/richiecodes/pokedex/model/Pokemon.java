@@ -1,28 +1,29 @@
 package com.richiecodes.pokedex.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
+@Entity
 public class Pokemon implements Serializable {
-    private String num;
+    @Id
+    private int num;
     private String name;
     private String type1;
     private String type2;
-    private String total;
-    private String hp;
-    private String att;
-    private String def;
-    private String spatk;
-    private String spdef;
-    private String speed;
-    private String gen;
+    private int total;
+    private int hp;
+    private int att;
+    private int def;
+    private int spatk;
+    private int spdef;
+    private int speed;
+    private int gen;
     private String legendary;
 
     public Pokemon(){}
 
-    public Pokemon(String num, String name, String type1, String type2,
-                   String total, String hp, String att, String def,
-                   String spatk, String spdef, String speed, String gen,
-                   String legendary) {
+    public Pokemon(int num, String name, String type1, String type2, int total, int hp, int att, int def, int spatk, int spdef, int speed, int gen, String legendary) {
         this.num = num;
         this.name = name;
         this.type1 = type1;
@@ -38,11 +39,11 @@ public class Pokemon implements Serializable {
         this.legendary = legendary;
     }
 
-    public String getNum() {
+    public int getNum() {
         return num;
     }
 
-    public void setNum(String num) {
+    public void setNum(int num) {
         this.num = num;
     }
 
@@ -70,67 +71,67 @@ public class Pokemon implements Serializable {
         this.type2 = type2;
     }
 
-    public String getTotal() {
+    public int getTotal() {
         return total;
     }
 
-    public void setTotal(String total) {
+    public void setTotal(int total) {
         this.total = total;
     }
 
-    public String getHp() {
+    public int getHp() {
         return hp;
     }
 
-    public void setHp(String hp) {
+    public void setHp(int hp) {
         this.hp = hp;
     }
 
-    public String getAtt() {
+    public int getAtt() {
         return att;
     }
 
-    public void setAtt(String att) {
+    public void setAtt(int att) {
         this.att = att;
     }
 
-    public String getDef() {
+    public int getDef() {
         return def;
     }
 
-    public void setDef(String def) {
+    public void setDef(int def) {
         this.def = def;
     }
 
-    public String getSpatk() {
+    public int getSpatk() {
         return spatk;
     }
 
-    public void setSpatk(String spatk) {
+    public void setSpatk(int spatk) {
         this.spatk = spatk;
     }
 
-    public String getSpdef() {
+    public int getSpdef() {
         return spdef;
     }
 
-    public void setSpdef(String spdef) {
+    public void setSpdef(int spdef) {
         this.spdef = spdef;
     }
 
-    public String getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    public void setSpeed(String speed) {
+    public void setSpeed(int speed) {
         this.speed = speed;
     }
 
-    public String getGen() {
+    public int getGen() {
         return gen;
     }
 
-    public void setGen(String gen) {
+    public void setGen(int gen) {
         this.gen = gen;
     }
 
