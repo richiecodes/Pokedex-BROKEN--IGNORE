@@ -5,23 +5,32 @@ import com.richiecodes.pokedex.model.Pokemon;
 import com.richiecodes.pokedex.repositories.PokemonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Random;
 
 @RestController
 @RequestMapping("/pokemon")
+@CrossOrigin
 public class PokemonController {
 
     @Autowired
     private PokemonRepository repository;
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Pokemon> getAllPokemon() {
         return repository.findAll();
+    }
+
+    @GetMapping("/random")
+    public ResponseEntity<Pokemon> getRandomPokemon() {
+        List<Pokemon> allPokemon = repository.findAll();
+
+        Random r = new Random();
+
+
+        return ResponseEntity.ok(allPokemon.get(r.nextInt(allPokemon.size())));
     }
 
     @GetMapping("search/id/{num}")
@@ -39,3 +48,4 @@ public class PokemonController {
         return ResponseEntity.ok(p);
     }
 }
+
