@@ -1,0 +1,95 @@
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@100&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: auto;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.pokemon {
+    max-width: 500px;
+    margin: auto;
+    overflow: auto;
+    background-color: crimson;
+    min-height: 300;
+    border: 1px solid white;
+    display: inline-flexbox;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.header {
+    font-family: 'Pokemon Solid', sans-serif;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 80px;
+    text-decoration: overline 3px solid white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: #f5c242;
+}
+
+.pokemon-img {
+    display: block;
+    height: 200px;
+    background-color: crimson;
+    padding: 25px;
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+}
+
+.pokemon-name {
+    color: white;
+    background-color: crimson;
+    display: block;
+    margin: auto;
+    font-size: 45px;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: bolder;
+    text-decoration: underline;
+    padding-bottom: 40px;
+}
+
+.pokemon-num {
+    color: yellow;
+    background-color: crimson;
+    display: block;
+    margin: auto;
+    font-size: 24px;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.title {
+    color: whitesmoke;
+    background-color: crimson;
+    display: block;
+    margin: auto;
+    font-size: 32px;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: bolder;
+    border-bottom: 2px solid white;
+}
+
+.stats {
+    color: whitesmoke;
+    background-color: crimson;
+    display: block;
+    margin: auto;
+    font-size: 32px;
+    font-family: 'Albert Sans', sans-serif;
+    font-weight: bolder;
+    border-bottom: 2px solid white;
+}
