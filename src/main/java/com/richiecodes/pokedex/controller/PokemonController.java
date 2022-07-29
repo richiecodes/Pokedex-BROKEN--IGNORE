@@ -34,7 +34,7 @@ public class PokemonController {
     }
 
     @GetMapping("search/id/{num}")
-    public ResponseEntity<Pokemon> getPokemonByNum(@PathVariable("num") int num) {
+    public ResponseEntity<Pokemon> getPokemonByNum(int num) {
         Pokemon p = repository.findById(num).orElseThrow(() -> new ResourceNotFoundException("Cannot find pokemon!"));
 
         return ResponseEntity.ok(p);
